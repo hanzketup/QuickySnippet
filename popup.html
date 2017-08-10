@@ -6,6 +6,7 @@
   <title>QuickySnippet</title>
 
   <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="codemirror/lib/codemirror.css" rel="stylesheet" type="text/css">
 
   <style>
     html,
@@ -13,9 +14,7 @@
       margin: 0;
     }
 
-    * {
-      color: #ecf0f1;
-    }
+    * {}
 
     .col-wrap {
 
@@ -35,6 +34,7 @@
 
       width: 100%;
       text-align: center;
+      color: white;
       background-color: #3F51B5;
     }
 
@@ -45,6 +45,10 @@
       align-items: center;
     }
 
+    .main-title h1 {
+      margin: 0.8rem 0;
+    }
+
     .top-sec {
 
       padding: 0;
@@ -53,14 +57,23 @@
       align-items: center;
     }
 
-    .play, .menu {
-      color:#FF5252;
+    .play,
+    .menu {
+      color: #FF5252;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
       font-size: 1.6rem;
       transition: 0.8s ease;
       cursor: pointer;
-    }.play,.menu:hover{text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);}
-    .play:active {transform: rotateZ(20deg);}
+    }
+
+    .play,
+    .menu:hover {
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .play:active {
+      transform: rotateZ(20deg);
+    }
 
     .icon {
       height: 2rem;
@@ -76,7 +89,12 @@
       padding: 0;
       height: 2.2rem;
       background-color: #303F9F;
-    }.under p{margin:0;}
+    }
+
+    .under p {
+      flex-grow: 1;
+      margin: 0;
+    }
 
     .col-in {
       width: 100%;
@@ -88,24 +106,48 @@
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
 
-    .col-in textarea {
+    .in-box {
 
       height: 100%;
+      width: 100%;
+      overflow: auto;
+
+      position: relative;
+
+      padding: 0;
+      margin: 0;
+
       flex-grow: 1;
 
       background-color: #ecf0f1;
 
       border: none;
-      border-bottom: 3px dashed #ecf0f1;
+      border-bottom: 2px dashed #303F9F;
       color: #333;
     }
 
-    .col-in textarea:first-child {
-      border-right: 3px dashed #ecf0f1;
+    .in-label{
+
+      position: absolute;
+      top:  5px;
+      right:5px;
+
     }
 
-    .col-in textarea:last-child {
-      border-left: 3px dashed #ecf0f1;
+    .CodeMirror {
+
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+      background-color: #ecf0f1;
+    }
+
+    #html {
+      border-right: 2px dashed #303F9F;
+    }
+
+    #js {
+      border-left: 2px dashed #303F9F;
     }
 
     .col-out {
@@ -142,16 +184,21 @@
       </div>
     </div>
     <div class="col-in">
-      <textarea id="html"></textarea>
-      <textarea id="css"></textarea>
-      <textarea id="js"></textarea>
+      <div class="in-box" id="html" class="in"><p class="in-label">html</p></div>
+      <div class="in-box" id="css" class="in"><p class="in-label">css</p></div>
+      <div class="in-box" id="js" class="in"><p class="in-label">js</p></div>
     </div>
     <div class="col-out">
       <!DOCTYPE html>
       <html>
 
       <head>
-        <script></script>
+        <script>
+          console.log('dab');
+        </script>
+        <style>
+
+        </style>
       </head>
 
       <body>
@@ -166,5 +213,10 @@
 
 </body>
 <script src="popup.js"></script>
+<script src="codemirror/lib/codemirror.js"></script>
+
+<script src="codemirror/mode/html/html.js"></script>
+<script src="codemirror/mode/css/css.js"></script>
+<script src="codemirror/mode/javascript/javascript.js"></script>
 
 </html>

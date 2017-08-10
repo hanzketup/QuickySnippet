@@ -12,6 +12,7 @@
   "permissions": [
     "activeTab",
     "storage",
+    [{"fileSystem": ["write"]}],
     "https://ajax.googleapis.com/"
   ]
 }
