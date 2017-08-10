@@ -2,17 +2,127 @@
 <html>
 
 <head>
-  <title>Drive Downloadable</title>
+
+  <title>QuickySnippet</title>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+
+    * {
+      color: #ecf0f1;
+    }
+
+    .col-wrap {
+
+      width: 40rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .col-title {
+
+      height: 6rem;
+      width: 100%;
+      text-align: center;
+      background-color: #2980b9;
+    }
+
+    .main-title{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .icon {
+      height: 2rem;
+      padding: 0 0.1rem;
+    }
+
+    .under {
+
+      font-weight: 500;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #3498db;
+    }
+
+    .col-in {
+      width: 100%;
+      height: 10rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .col-in textarea {
+
+      height: 100%;
+      flex-grow: 1;
+
+      border: none;
+      border-bottom: 3px dashed;
+      color: ;
+    }
+
+    .col-in textarea:first-child {
+      border-right: 3px dashed;
+    }
+
+    .col-in textarea:last-child {
+      border-left: 3px dashed;
+    }
+
+    .col-out {
+
+      height: 20rem;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: scroll;
+    }
+  </style>
+
 </head>
 
 <body>
 
   <div class="col-wrap">
+    <div class="col-title">
+      <div class="main-title">
+        <h1>QuickySnippet!</h1>
+        <img class="icon" src="icon.png" />
+      </div>
+      <div class="under">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JS</p>
+      </div>
+    </div>
     <div class="col-in">
-
+      <textarea id="html"></textarea>
+      <textarea id="css"></textarea>
+      <textarea id="js"></textarea>
     </div>
     <div class="col-out">
+      <!DOCTYPE html>
+      <html>
 
+      <body>
+
+
+
+      </body>
+
+      </html>
     </div>
   </div>
 
