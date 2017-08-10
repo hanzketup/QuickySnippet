@@ -5,6 +5,8 @@
 
   <title>QuickySnippet</title>
 
+  <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
+
   <style>
     html,
     body {
@@ -31,10 +33,9 @@
       flex-direction: column;
       justify-content: space-around;
 
-      height: 6rem;
       width: 100%;
       text-align: center;
-      background-color: #2980b9;
+      background-color: #3F51B5;
     }
 
     .main-title {
@@ -44,9 +45,26 @@
       align-items: center;
     }
 
+    .top-sec {
+
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .play, .menu {
+      color:#FF5252;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      font-size: 1.6rem;
+      transition: 0.8s ease;
+      cursor: pointer;
+    }.play,.menu:hover{text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);}
+    .play:active {transform: rotateZ(20deg);}
+
     .icon {
       height: 2rem;
-      padding: 0 0.1rem;
+      padding: 0 0.2rem;
     }
 
     .under {
@@ -55,8 +73,10 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-color: #3498db;
-    }
+      padding: 0;
+      height: 2.2rem;
+      background-color: #303F9F;
+    }.under p{margin:0;}
 
     .col-in {
       width: 100%;
@@ -73,6 +93,8 @@
       height: 100%;
       flex-grow: 1;
 
+      background-color: #ecf0f1;
+
       border: none;
       border-bottom: 3px dashed #ecf0f1;
       color: #333;
@@ -88,6 +110,7 @@
 
     .col-out {
 
+      background-color: white;
       height: 20rem;
       width: 100%;
       overflow: auto;
@@ -100,9 +123,17 @@
 
   <div class="col-wrap">
     <div class="col-title">
-      <div class="main-title">
-        <h1>QuickySnippet!</h1>
-        <img class="icon" src="icon.png" />
+      <div class="top-sec">
+
+        <a></a>
+
+        <div class="main-title">
+          <h1>QuickySnippet!</h1>
+          <img class="icon" src="icon.png" />
+        </div>
+
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+
       </div>
       <div class="under">
         <p>HTML</p>
@@ -120,13 +151,12 @@
       <html>
 
       <head>
-        <script>
-        </script>
+        <script></script>
       </head>
 
       <body>
 
-        
+
 
       </body>
 
