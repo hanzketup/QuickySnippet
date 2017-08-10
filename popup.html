@@ -27,18 +27,21 @@
 
     .col-title {
 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
       height: 6rem;
       width: 100%;
       text-align: center;
       background-color: #2980b9;
     }
 
-    .main-title{
+    .main-title {
 
       display: flex;
       justify-content: center;
       align-items: center;
-
     }
 
     .icon {
@@ -62,6 +65,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
 
     .col-in textarea {
@@ -70,24 +74,23 @@
       flex-grow: 1;
 
       border: none;
-      border-bottom: 3px dashed;
-      color: ;
+      border-bottom: 3px dashed #ecf0f1;
+      color: #333;
     }
 
     .col-in textarea:first-child {
-      border-right: 3px dashed;
+      border-right: 3px dashed #ecf0f1;
     }
 
     .col-in textarea:last-child {
-      border-left: 3px dashed;
+      border-left: 3px dashed #ecf0f1;
     }
 
     .col-out {
 
       height: 20rem;
       width: 100%;
-      overflow-x: auto;
-      overflow-y: scroll;
+      overflow: auto;
     }
   </style>
 
@@ -116,9 +119,14 @@
       <!DOCTYPE html>
       <html>
 
+      <head>
+        <script>
+        </script>
+      </head>
+
       <body>
 
-
+        
 
       </body>
 
