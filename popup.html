@@ -14,8 +14,6 @@
       margin: 0;
     }
 
-    * {}
-
     .col-wrap {
 
       width: 40rem;
@@ -51,7 +49,7 @@
 
     .top-sec {
 
-      padding: 0;
+      padding: 0.5rem 0;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -71,29 +69,9 @@
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .play:active {
-      transform: rotateZ(20deg);
-    }
-
     .icon {
       height: 2rem;
       padding: 0 0.2rem;
-    }
-
-    .under {
-
-      font-weight: 500;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0;
-      height: 2.2rem;
-      background-color: #303F9F;
-    }
-
-    .under p {
-      flex-grow: 1;
-      margin: 0;
     }
 
     .col-in {
@@ -106,6 +84,14 @@
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
 
+    #html {
+      border-right: 2px solid #303F9F;
+    }
+
+    #js {
+      border-left: 2px solid #303F9F;
+    }
+
     .in-box {
 
       height: 100%;
@@ -113,24 +99,29 @@
       overflow: auto;
 
       position: relative;
-
       padding: 0;
       margin: 0;
-
       flex-grow: 1;
 
-      background-color: #ecf0f1;
-
       border: none;
-      border-bottom: 2px dashed #303F9F;
+      border-bottom: 2px solid #303F9F;
       color: #333;
+      background-color: #ecf0f1;
     }
 
-    .in-label{
+    .in-label {
 
       position: absolute;
-      top:  5px;
-      right:5px;
+      bottom:0px;
+      right: 0px;
+      margin: 0;
+      font-size: 12px;
+      z-index: 50;
+
+      padding:0.2rem 0.5rem;
+      border-radius: 3px 0px 0px 0px;
+      color:white;
+      background-color:#303F9F;
 
     }
 
@@ -142,14 +133,6 @@
       background-color: #ecf0f1;
     }
 
-    #html {
-      border-right: 2px dashed #303F9F;
-    }
-
-    #js {
-      border-left: 2px dashed #303F9F;
-    }
-
     .col-out {
 
       background-color: white;
@@ -158,9 +141,7 @@
       overflow: auto;
     }
   </style>
-
 </head>
-
 <body>
 
   <div class="col-wrap">
@@ -177,16 +158,17 @@
         <i class="fa fa-bars menu" aria-hidden="true"></i>
 
       </div>
-      <div class="under">
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JS</p>
-      </div>
     </div>
     <div class="col-in">
-      <div class="in-box" id="html" class="in"><p class="in-label">html</p></div>
-      <div class="in-box" id="css" class="in"><p class="in-label">css</p></div>
-      <div class="in-box" id="js" class="in"><p class="in-label">js</p></div>
+      <div class="in-box" id="html" class="in">
+        <p class="in-label">html</p>
+      </div>
+      <div class="in-box" id="css" class="in">
+        <p class="in-label">css</p>
+      </div>
+      <div class="in-box" id="js" class="in">
+        <p class="in-label">javascript</p>
+      </div>
     </div>
     <div class="col-out">
       <!DOCTYPE html>
@@ -214,9 +196,7 @@
 </body>
 <script src="popup.js"></script>
 <script src="codemirror/lib/codemirror.js"></script>
-
 <script src="codemirror/mode/html/html.js"></script>
 <script src="codemirror/mode/css/css.js"></script>
 <script src="codemirror/mode/javascript/javascript.js"></script>
-
 </html>
